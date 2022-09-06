@@ -3,12 +3,16 @@ This config is for my SKR 1.3 based CoreXY printer with dual-Z independent stepp
 
 ## Slicer adjustments so that the START_GCODE macro works
 In Prusa Slicer, I have the following code in the Start Gcode field:
-```M104 S0 ; convince Prusa Slicer not to pre-heat nozzle
+```
+M104 S0 ; convince Prusa Slicer not to pre-heat nozzle
 M140 S0 ; convince Prusa Slicer not to pre-heat bed  
-START_PRINT BED_TEMP=[first_layer_bed_temperature] EXTRUDER_TEMP=[first_layer_temperature] PRINT_MIN={first_layer_print_min[0]},{first_layer_print_min[1]} PRINT_MAX={first_layer_print_max[0]},{first_layer_print_max[1]}```
+START_PRINT BED_TEMP=[first_layer_bed_temperature] EXTRUDER_TEMP=[first_layer_temperature] PRINT_MIN={first_layer_print_min[0]},{first_layer_print_min[1]} PRINT_MAX={first_layer_print_max[0]},{first_layer_print_max[1]}
+```
 
 The End Gcode is:
-```END_PRINT```
+```
+END_PRINT
+```
 
 
 ### WARNING
